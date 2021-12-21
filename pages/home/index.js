@@ -1,6 +1,7 @@
 import Banner from "./banner";
 import NavBar from "./navbar";
 import Services from "./service";
+import WhyWe from "./whyWe";
 
 const Landing = () => {
     return (
@@ -8,6 +9,7 @@ const Landing = () => {
             <NavBar />
             <Banner />
             <Services />
+            <WhyWe />
         </div>
     );
 }
