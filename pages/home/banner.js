@@ -62,48 +62,53 @@ const Banner = () => {
     })
     const { started, startMail, bnImg } = useStyles();
     return (
-        <Container>
-            <Grid container sx={{ alignItems: 'center' }}>
-                <Grid item xs={12} sm={12} md={6}>
-                    <Typography variant="h3">
-                        An excellence center for education
-                    </Typography>
-                    <Typography variant="body2" sx={{ width: '75%', my: 4 }}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam est, id quisquam ullam repellat cupiditate!
-                    </Typography>
-
-                    <Box component="div">
-                        <input className={startMail} type="email" placeholder='Enter your email' required />
-                        <input className={started} type="submit" value="Get Started" />
-                    </Box>
-
-                </Grid>
-                <Grid sx={{ position: 'relative' }} item xs={12} sm={12} md={6}>
-                    <Image className={bnImg} src={bannerImg} alt="" />
-                    <Box sx={{ position: 'absolute', bottom: 12, width: 150, height: 100, background: '#fff', borderRadius: 1, boxShadow: 1, p: 2, textAlign: 'center' }}>
-                        <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                            27k
+        <Box component="section" sx={{ my: 3 }}>
+            <Container>
+                <Grid container sx={{ alignItems: 'center' }}>
+                    <Grid item xs={12} sm={12} md={6}>
+                        <Typography variant="h3">
+                            An excellence center for education
                         </Typography>
-                        <Typography variant="body2">
-                            Member Joined
+                        <Typography variant="body2" sx={{ width: '75%', my: 4 }}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam est, id quisquam ullam repellat cupiditate!
                         </Typography>
-                    </Box>
-                    <Box sx={{ position: 'absolute', top: 100, right: 10, width: 180, height: 100, background: '#fff', borderRadius: 1, boxShadow: 1, p: 2, display: 'flex', alignItems: 'center' }}>
-                        <Box sx={{ mr: 1 }}>
-                            <AccessTimeFilledIcon />
+
+                        <Box component="div">
+                            <input className={startMail} type="email" placeholder='Enter your email' required />
+                            <input className={started} type="submit" value="Get Started" />
                         </Box>
-                        <Box>
+
+                    </Grid>
+                    {/* Image Part */}
+                    <Grid sx={{ position: 'relative' }} item xs={12} sm={12} md={6}>
+                        <Image className={bnImg} src={bannerImg} alt="" />
+                        {/* Bottom */}
+                        <Box sx={{ position: 'absolute', bottom: 12, width: 150, height: 100, background: '#fff', borderRadius: 2, boxShadow: 1, p: 2, textAlign: 'center' }}>
                             <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                                101k
+                                27k
                             </Typography>
-                            <Typography variant="body2" sx={{ color: 'textSecondary', fontSize: 13 }}>
-                                Active Student
+                            <Typography variant="body2">
+                                Member Joined
                             </Typography>
                         </Box>
-                    </Box>
+                        {/*Top Right */}
+                        <Box sx={{ position: 'absolute', top: 100, right: 10, width: 180, height: 100, background: '#fff', borderRadius: 2, boxShadow: 1, p: 2, display: 'flex', alignItems: 'center' }}>
+                            <Box sx={{ mr: 1 }}>
+                                <AccessTimeFilledIcon />
+                            </Box>
+                            <Box>
+                                <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                                    101k
+                                </Typography>
+                                <Typography variant="body2" sx={{ color: 'textSecondary', fontSize: 13 }}>
+                                    Active Student
+                                </Typography>
+                            </Box>
+                        </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
-        </Container>
+            </Container>
+        </Box>
     );
 }
 
